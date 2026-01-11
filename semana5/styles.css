@@ -1,34 +1,30 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: #d98d8d;
 }
 
-.controls {
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 8px 15px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.gallery img {
-    width: 180px;
-    height: 140px;
+.galeria img {
+    width: 100%;
+    height: 150px;
     object-fit: cover;
-    border: 3px solid transparent;
     cursor: pointer;
+    border-radius: 8px;
 }
 
-.gallery img.selected {
-    border: 4px solid blue;
+.galeria img.seleccionada {
+    border: 4px solid #007BFF;
 }
+
+.controles {
+    margin-top: 20px;
+}
+

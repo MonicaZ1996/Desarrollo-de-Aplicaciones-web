@@ -1,50 +1,38 @@
-const gallery = document.getElementById("gallery");
-const addBtn = document.getElementById("addImages");
-const deleteBtn = document.getElementById("deleteImage");
+const galeria = document.getElementById("galeria");
+const inputUrl = document.getElementById("urlImagen");
+const btnAgregar = document.getElementById("agregar");
+const btnEliminar = document.getElementById("eliminar");
 
-let selectedImage = null;
+let imagenSeleccionada = null;
 
-/* RUTAS DE LAS IMÁGENES */
-const images = [
-    "assets/img/imagen3.jpg",
-    "assets/img/imagen4.jpg",
-    "assets/img/imagen5.jpg"
-];
-
-/* Cargar imágenes */
-addBtn.addEventListener("click", () => {
-    gallery.innerHTML = "";
-
-    images.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-
-        img.addEventListener("click", () => {
-            selectImage(img);
+// Seleccionar imagen
+galeria.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+        document.querySelectorAll(".galeria img").forEach(img => {
+            img.classList.remove("seleccionada");
         });
-
-        gallery.appendChild(img);
-    });
-});
-
-/* Seleccionar imagen */
-function selectImage(img) {
-    document.querySelectorAll(".gallery img").forEach(i => {
-        i.classList.remove("selected");
-    });
-
-    img.classList.add("selected");
-    selectedImage = img;
-}
-
-/* Eliminar imagen seleccionada */
-deleteBtn.addEventListener("click", () => {
-    if (selectedImage) {
-        selectedImage.remove();
-        selectedImage = null;
-    } else {
-        alert("Seleccione una imagen primero");
+        e.target.classList.add("seleccionada");
+        imagenSeleccionada = e.target;
     }
 });
+
+// Agregar imagen por URL
+btnAgregar.addEventListener("click", () => {
+    if (inputUrl.value !== "") {
+        const nuevaImagen = document.createElement("img");
+        nuevaImagen.src = inputUrl.value;
+        galeria.appendChild(nuevaImagen);
+        inputUrl.value = "";
+    }
+});
+
+// Eliminar imagen seleccionada
+btnEliminar.addEventListener("click", () => {
+    if (imagenSeleccionada) {
+        imagenSeleccionada.remove();
+        imagenSeleccionada = null;
+    }
+});
+
 
 
