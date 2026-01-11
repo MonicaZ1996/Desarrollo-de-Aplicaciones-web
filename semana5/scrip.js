@@ -5,25 +5,46 @@ const gallery = document.getElementById("gallery");
 
 let selectedImage = null;
 
-/* RUTA CORRECTA DE LA IMAGEN */
-const DEFAULT_IMAGE = "assets/imagen3.jpg";
+/* 🔹 IMÁGENES QUE YA ESTÁN EN assets */
+const defaultImages = [
+    "assets/img/imagen4.jpg",
+    "assets/img/imagen3.jpg",
+    "assets/img/imagen5.jpg"
+];
 
-/* Agregar imagen */
-addBtn.addEventListener("click", () => {
-    const url = inputUrl.value.trim() || DEFAULT_IMAGE;
+/* 🔹 Cargar imágenes automáticamente al iniciar */
+window.addEventListener("load", () => {
+    defaultImages.forEach(path => {
+        createImage(path);
+    });
+});
 
+/* 🔹 Crear imagen (función reutilizable) */
+function createImage(path) {
     const img = document.createElement("img");
-    img.src = url;
+    img.src = path;
 
     img.addEventListener("click", () => {
         selectImage(img);
     });
 
     gallery.appendChild(img);
+}
+
+/* 🔹 Agregar imagen desde el input */
+addBtn.addEventListener("click", () => {
+    const url = inputUrl.value.trim();
+
+    if (url === "") {
+        alert("Escribe una ruta válida, ejemplo: assets/imagen1.jpg");
+        return;
+    }
+
+    createImage(url);
     inputUrl.value = "";
 });
 
-/* Seleccionar imagen */
+/* 🔹 Seleccionar imagen */
 function selectImage(img) {
     document.querySelectorAll(".gallery img").forEach(image => {
         image.classList.remove("selected");
@@ -33,7 +54,7 @@ function selectImage(img) {
     selectedImage = img;
 }
 
-/* Eliminar imagen */
+/* 🔹 Eliminar imagen seleccionada */
 deleteBtn.addEventListener("click", () => {
     if (selectedImage) {
         selectedImage.remove();
@@ -43,11 +64,12 @@ deleteBtn.addEventListener("click", () => {
     }
 });
 
-/* Tecla Delete */
+/* 🔹 Eliminar con tecla Delete */
 document.addEventListener("keydown", (e) => {
     if (e.key === "Delete" && selectedImage) {
         selectedImage.remove();
         selectedImage = null;
     }
 });
+
 
