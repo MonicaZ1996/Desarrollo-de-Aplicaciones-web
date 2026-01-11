@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Semana 3 - HTML y CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Proyecto Semana 3</h1>
+    <nav>
+        <a href="#inicio">Inicio</a> |
+        <a href="#contenido">Contenido</a> |
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main id="inicio">
+
+    <section>
+        <h2>Introducción</h2>
+        <p>
+            <h2>HTML CON MONICA ZUÑIGA</h2>
+            
+            Este proyecto demuestra el uso de 
+            <strong>HTML semántico</strong> y 
+            <em>estilos con CSS</em>.
+        </p>
+    </section>
+
+    <section id="contenido">
+        <h2>Elementos HTML</h2>
+
+        <article>
+            <h3>Listas</h3>
+
+            <p>Lista ordenada:</p>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+
+            <p>Lista desordenada:</p>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Live Server</li>
+                <li>GitHub</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Imágenes de la galería</h3>   
+                <img src="assets\img\imagen1.jpg" alt="Imagen1.jpg">
+                <video controls width>
+                <source src="assets\video\video1.mp4" type="video/mp4"></video>
+        </article>
+
+        <article>
+            <h3>Tabla</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnología</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Estructura</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Diseño</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactividad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+            <h3>Enlace externo</h3>
+            <a href="https://developer.mozilla.org/es/" target="_blank">
+                Visitar MDN Web Docs
+            </a>
+        </article>
+    </section>
+
+    <section id="contacto">
+        <h2>Formulario de contacto</h2>
+
+        <form>
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" required><br><br>
+
+            <label>Correo:</label><br>
+            <input type="email" name="correo" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 - Proyecto Semana 3</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+
+}
+
+header {
+    background-color: red;
+    color: black;
+    padding: 15px;
+}
+nav {
+    background-color: lightblue;
+    padding: 50px;
+}
+nav ul li {
+    float: left;
+    list-style-type: none;
+    margin-right: 10px;
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.clearfix{
+    clear: both;
+}
+
+
+h1, h2, h3 {
+    color: black;
+}
+
+p {
+    color: #333;
+}
+#content{
+    float: left;
+    width: 100%;
+    min-height: 500px;
+    background-color: palevioletred;
+}
+aside{
+    float: left;
+    width: 50%;
+    background-color: palevioletred;
+    min-height: 500px;
+
+}
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
