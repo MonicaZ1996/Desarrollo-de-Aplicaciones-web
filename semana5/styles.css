@@ -1,51 +1,34 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    padding: 20px;
     text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
 .controls {
     margin-bottom: 20px;
 }
 
-input {
-    width: 280px;
-    padding: 8px;
-}
-
 button {
-    padding: 8px 12px;
+    padding: 8px 15px;
     margin: 5px;
     cursor: pointer;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 15px;
-    max-width: 900px;
-    margin: auto;
 }
 
 .gallery img {
-    width: 100%;
-    height: 150px;
+    width: 180px;
+    height: 140px;
     object-fit: cover;
+    border: 3px solid transparent;
     cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-.selected {
-    border: 4px solid #007BFF;
-    box-shadow: 0 0 15px #007BFF;
+.gallery img.selected {
+    border: 4px solid blue;
 }
