@@ -3,17 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista Dinámica de Productos</title>
+
+    <!-- Estilos básicos para una mejor presentación -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ef8fd9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedor {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Lista de Productos</h1>
+    <div class="contenedor">
+        <h1>Lista de Productos</h1>
 
-    <!-- Lista donde se mostrarán los productos -->
-    <ul id="listaProductos"></ul>
+        <!-- Lista dinámica -->
+        <ul id="listaProductos"></ul>
 
-    <!-- Botón para agregar un producto -->
-    <button id="btnAgregar">Agregar Producto</button>
+        <!-- Botón -->
+        <button id="btnAgregar">Agregar Producto</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+

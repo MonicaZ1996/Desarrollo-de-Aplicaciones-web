@@ -21,7 +21,7 @@ const productos = [
 const lista = document.getElementById("listaProductos");
 const botonAgregar = document.getElementById("btnAgregar");
 
-// Función para renderizar la lista de productos
+// Función para renderizar productos
 function renderizarProductos() {
     lista.innerHTML = "";
 
@@ -36,10 +36,10 @@ function renderizarProductos() {
     });
 }
 
-// Mostrar productos al cargar la página
+// Renderizar al cargar la página
 renderizarProductos();
 
-// Evento para agregar un nuevo producto
+// Evento del botón para agregar producto
 botonAgregar.addEventListener("click", () => {
     const nuevoProducto = {
         nombre: "Nuevo Producto",
