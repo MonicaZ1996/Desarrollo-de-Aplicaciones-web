@@ -1,0 +1,10 @@
+/* Hacer que el título del navbar sea más grande */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Sombra personalizada para secciones */
+section {
+    border-radius: 10px;
+}
